@@ -1,0 +1,84 @@
+.form-section {
+  width: 100%;
+  z-index: 9999;
+}
+
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+.form label {
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-veryDarkViolet);
+}
+.form input {
+  display: block;
+  width: 100%;
+  border-radius: 0.45rem;
+  padding: 0.5rem;
+  border: 2px solid var(--clr-lightGrayishViolet);
+}
+.form input::-moz-placeholder {
+  color: var(--clr-darkGrayishViolet);
+}
+.form input::placeholder {
+  color: var(--clr-darkGrayishViolet);
+}
+.form input:focus {
+  border: 1px solid var(--clr-activeInput);
+  outline: 1px solid var(--clr-activeInput);
+}
+
+#form__username:not(::-moz-placeholder) {
+  text-transform: capitalize;
+}
+
+#form__username:not(::placeholder) {
+  text-transform: capitalize;
+}
+
+.input-container[data-error] .input {
+  border-color: #c92432;
+  background: #fffafa;
+  color: #c92432;
+}
+
+.input-container[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.85em;
+  color: #c92432;
+  display: block;
+  margin: 10px 0;
+}
+
+.form__card-info {
+  display: flex;
+  gap: 0.75rem;
+}
+.form__card-info .form__card-exp {
+  flex: 1;
+}
+.form__card-info .form__card-exp label {
+  white-space: nowrap;
+}
+
+.form__card-exp-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.submit-btn {
+  color: var(--clr-white);
+  width: 100%;
+  border: none;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--clr-veryDarkViolet);
+  cursor: pointer;
+}
+.submit-btn:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=form.css.map */
